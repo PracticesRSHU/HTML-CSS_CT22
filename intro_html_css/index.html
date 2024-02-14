@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Into HTML/CSS</title>
+    <!-- ВБУДОВАНІ СТИЛІ -->
+    <style> 
+        html {
+            font-size: 18px;
+            font-family: monospace;
+        }
+
+        /* універсальний селектор */
+        /* * {
+            margin: 0;
+        } */
+        body {
+            font-size: 18px;
+        }
+
+        /* селектор елемента */
+        h1,
+        h3 {
+            color: #008000;
+            text-decoration: underline;
+        }
+
+        /* h1{
+            color: darkred;
+        } */
+        /* селектор ідентифікатора елемента id  */
+        #header1 {
+            text-decoration: none;
+        }
+
+        /* селектор класу елемента class елемента */
+        .block-info {
+            font-size: 24px;
+            color: blueviolet;
+        }
+
+        .wrap {
+            margin: 0 auto;
+            width: 80%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <h1 title="Заголовок першого рівня" id="header1" tabindex="1">Heading 1</h1>
+        <h2 tabindex="3">Heading 2</h2>
+        <h3 tabindex="2">Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+        <hr>
+        <!-- використання тегів фізичного і логічного форматування -->
+        <p id="p1" style="color:blue;" class="block-info">
+            Lorem ipsum <b><i>dolor</i></b> sit amet consectetur adipisicing elit. Voluptatem, delectus?
+            Lorem ipsum <strong><em>dolor</em></strong> sit amet, <span
+                style="color: yellow; font-size: 2em;">consectetur
+                adipisicing elit</span>.
+            <br>
+            <img src="https://ukr-kniga.com.ua/wp-content/uploads/2022/08/Q9I-L732xJE.jpeg"
+                alt="Картина 'Садок вишневий'" width="200">
+            Provident sequi, molestiae praesentium rerum ut nesciunt magni. Optio, est nemo fugiat omnis libero sapiente
+            voluptates. Voluptatem ab cumque sequi quibusdam enim!
+        </p>
+        <p class="block-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio laboriosam minus
+            perspiciatis
+            rerum possimus
+            quisquam quidem sint eum suscipit saepe.</p>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, consequuntur. Explicabo officia
+                dignissimos possimus quod qui dolorem laborum? Error, quia.</p>
+        </div>
+        <pre>
+        Садок вишневий коло хати,
+        Хрущі над вишнями гудуть,
+        Плугатарі з плугами йдуть,
+        
+        Співають ідучи дівчата,
+        А матері вечерять ждуть.
+        Сім’я вечеря коло хати,
+        
+        Вечірня зіронька встає.
+        Дочка вечерять подає,
+        А мати хоче научати,
+        
+        Так соловейко не дaє.
+        Поклала мати коло хати
+        Маленьких діточок своїх;
+        
+        <ins>
+        Сама заснула коло їх.
+        Затихло все, тілько дівчата
+        Та соловейко не затих.
+        </ins>
+        </pre>
+        <div>
+            <p>
+                Lorem ipsum<sub>1</sub> dolor sit<sup>2</sup> amet.
+            </p>
+            <kb>Ctrl+d</kb> - <del>working</del> wrap for tag
+            <code>
+            <pre>
+                let <var>x</var>;
+                x=prompt("Input x:")
+                console.log(x)
+            </pre>
+        </code>
+            <hr>
+            <blockquote>
+                Lorem <u>ipsum</u>
+                <sump>dolor</sump> sit amet consectetur adipisicing elit.
+            </blockquote>
+        </div>
+    </div>
+    <div>
+        <!-- Використання внутрішніх стилів -->
+        <span style="font-size: 2em; color:red"> &spades;</span></div>
+<footer>&copy; Shrol</footer>
+</body>
+
+</html>

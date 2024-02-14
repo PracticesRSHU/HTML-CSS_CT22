@@ -1,0 +1,62 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    /* font-size: 200%; */
+    font-size: 2rem;
+}
+
+.block{
+    font-size: 20px;
+    color: gray;
+}
+
+#experiment{
+    color:black;
+    font-style: italic;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 30px;
+    /* font-variant: small-caps; */
+    /* font: [font-style | font-variant | font-weight | font-stretch] font-size [/line-height] font-family | inherit */
+     /* font: italic bold 24px/1 sans-serif; */
+     text-transform: uppercase;
+     /* додавання відступів */
+     /* white-space: pre ; */
+     /* word-break: break-all; */
+     /* word-break:  normal; */
+     /* word-wrap: break-word; */
+     text-align: justify;
+     text-align: right;
+}
+
+#experiment>h2{
+    writing-mode: vertical-lr;
+}
+
+#experiment>p:nth-child(2){
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#experiment>p:nth-child(3){
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: 2px solid black underline;
+}
+
+.block:nth-child(odd){
+background-color: lightgray;
+word-spacing: 10px;
+letter-spacing: 5px;
+
+}
+
+.block>p::first-letter{
+    font-size: 30px;
+    font-weight: 800;
+    color: blue;
+}
+
+.block>p::first-line{
+       
+    color: rgb(62, 62, 65);
+    text-shadow: 2px 3px 8px green;
+}
