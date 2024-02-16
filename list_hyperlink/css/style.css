@@ -1,0 +1,134 @@
+html{
+    font-size: 18px; 
+    /*Chroom + html => rem */
+}
+body{
+ fo   font-size: 1.4rem;
+}
+/* ol{} */
+.list__ordered {
+    color:blue;
+    background-color: lightcoral;
+    /* type numeric */
+    /* list-style-type: decimal-leading-zero; */
+    list-style-type: upper-roman;
+    list-style-type: upper-latin;
+    list-style-type: decimal;
+    /* position */
+    /* list-style-position: inside; */
+    list-style-position: outside;
+    /* list-style-image:   url(../images/icon_check.png); */
+    /* list-style: lower-alpha inside; */
+
+}
+.list__ordered-item {
+    background-color: lightseagreen;
+    margin-bottom: 5px;
+    /* margin-top: 5px; */
+}
+
+.list__ordered-item span::after{
+    content: "\2720";
+    font-weight: 800;
+    /* font-style: italic; */
+    color: white;
+}
+/* using psevdoelement :: marker */
+.list__ordered-item::marker{
+    font-weight: 800;
+    color:white
+}
+/* using psevdoclass : */
+/* odd - непарні 2n+1  */
+/* even - парні  2n    */
+/* every third elements */
+.list__ordered-item:nth-child(3n+1){
+    background-color: lightsalmon;
+}
+.list__ordered-item>span{
+    /* content:"\2722"; */
+    font-weight: 800;
+    color: black;
+}
+
+
+/*========== CSS unordered list ================ */
+.list__unordered{
+    /* list-style-type: circle; */
+    list-style-type: none;
+}
+
+/* variant 1 using selector with psevdo element */
+ .list__unordered>li::marker{
+    /* content:"\2640"; */
+    /* content:"\2721";
+    content:"\263B";
+    color: yellow;
+    font-weight: 900; */
+} 
+
+/* variant 2 using selector with psevdo element ::before*/
+.list__unordered>li::before{
+    /* content:' START '; */
+    /* content: url(../images/icon_check.png); */
+    content: "\2722" ;
+    color: blue;
+    font-weight: 700;
+    /* background-color: blue; */
+}
+
+.list__unordered>li::after{
+    content:' END ';
+    background-color: violet;
+}
+
+
+/* ===================== CSS included list=========== */
+.course{
+    list-style-type: upper-roman;
+}
+ /* ol.course > li.course-item > ol > li > ul > li::marker{
+    content:"😆";
+} */
+li.course-item > ol > li > ul > li::marker{
+    content:"😆";
+}
+
+.course{
+    font-size: 34px;
+}
+.course>.course-item>ol{
+    /* font-size: 1.5rem; */
+    font-size: 0.5em;
+}
+
+.course>.course-item>ol>li>ul{
+    /* font-size: 1.5rem; */
+    font-size: 0.5em;
+    /* parent property */
+}
+
+/* ==========Css Defination List */
+
+dl{
+    background-color: bisque;
+    padding: 20px;
+    border: 12px double gray
+}
+
+dt{
+    background-color: aquamarine;
+    padding-left: 20px;
+}
+
+dd{
+    background-color: lightcoral;
+    /* margin: 5px; */
+    margin-left: 0 ;
+    /* padding: 15px; */
+    /* top-bottom  left-right */
+    /* padding: 15px 30px; */
+    /* top left-right bottom */
+    padding: 15px 30px 15px;
+    
+}
