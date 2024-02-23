@@ -6,13 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hyperlink</title>
     <style>
-        body{
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
             font-size: 24px;
         }
-        a{
-            text-decoration: none;
-            color:black;
+
+        a {
+            /* text-decoration: none; */
+            color: black;
         }
+
         .header {
             background-color: rgb(81, 255, 0);
             /* color: white; */
@@ -31,19 +39,111 @@
         nav {
             display: inline-block;
             width: 75%;
-            /* float:right; */
-            /* margin-right:auto ; */
+            height: 100%;
             text-align: right;
+            /* padding-top: 15px; */
         }
 
-        .menu__main a{
-            list-style-type: none;
+        /* menu__main */
+        nav ul {
+            margin-top: 15px;
+        }
+
+        .menu__main a {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            background-color: rgb(38, 224, 38);
+            padding: 10px;
+            border-radius: 2px solid green;
+
+            /* margin-right: 5px; */
+            /* background-color: aquamarine; */
+        }
+
+        /* .menu__main a:visited{ */
+        /* color: blue; */
+        /* cursor: pointer; */
+        /* background-color: aquamarine; */
+        /* }  */
+
+        .menu__main a:link {
             color: white;
             /* background-color: aquamarine; */
         }
 
+        .menu__main a:hover {
+            color: rgb(116, 6, 6);
+            cursor: pointer;
+            background-color: aquamarine;
+        }
+
+        .menu__main a:active {
+            color: green;
+            background-color: aquamarine;
+        }
+
+
         .menu__main-item {
             display: inline-block;
+        }
+
+        main
+        {
+            padding: 0 25px;
+        }
+        main>ol{
+            margin-left: 45px;
+        }
+       p>img{
+            width: 200px;
+            float: left;
+            /* margin-right: 20px;
+            margin-bottom: 20px;
+            margin-top: 20px; */
+            /* top =>right=> bottom=> left */
+            margin: 20px 35px 20px 0;
+            border: 7px solid green;
+            box-shadow:  20px 11px 12px 4px red;
+            padding: 5px;
+            border-radius: 50px;
+        }
+        .block_image
+        {
+            width: 300px;
+            padding: 20px;
+            margin: 0 35px 20px 0;
+            /* float: left; */
+            border: 20px solid green;
+        }
+
+        .block_image img{
+            width: 100%;
+            
+        }
+        figcaption{
+            text-align: center;
+            text-transform: lowercase;
+        }
+        article{
+            border: 2px solid blue;
+            background-color: aquamarine;
+            clear: left;
+            overflow: auto;
+        }
+        /* допоміжні класи */
+        .right{
+            float:right;
+            /* лінії */
+            border-style:groove ;
+            border-bottom: 10px solid blue;
+            border-top: 10px solid blue;
+            /* кути */
+            border-top-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+        .left{
+            float:left;
         }
     </style>
 </head>
@@ -58,17 +158,20 @@
                 <li class="menu__main-item"><a href="https://www.google.com.ua/" target="_blank">Google</a></li>
             </ul>
         </nav>
+    </header>
         <main>
-
             <h2>Content</h2>
             <ol>
                 <li><a href="#team1">team1</a></li>
                 <li><a href="#team2">team2</a></li>
                 <li><a href="#team3">team3</a></li>
+                <li><a href="mailto:shrolt@ukr.net">Write Me</a></li>
+                <li><a href="tel:0362824578">Tel me</a></li>
             </ol>
-            <article id="team1">
-                <h3>TEAM1</h3>
+            <article>
+                <h3 id="team1">TEAM1</h3>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt quas veritatis assumenda
+                    <img class="right" src="https://cdn2.iconfinder.com/data/icons/user-23/512/User_Customers.png" alt="team1" width="200">
                     necessitatibus, maxime adipisci, nostrum earum explicabo aliquid, consequuntur esse ad! Laudantium
                     ab alias asperiores consequatur quisquam sed harum sint quasi exercitationem. Velit inventore illum
                     deserunt provident, corporis quia. Aliquam, id labore. Facere optio dicta harum blanditiis
@@ -79,6 +182,10 @@
             </article>
             <article id="team2">
                 <h3>TEAM2</h3>
+                <div class="block_image left">
+                    <img src="https://cdn2.iconfinder.com/data/icons/user-23/512/User_Customers.png" alt="team2">
+                    
+                </div>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt quas veritatis assumenda
                     necessitatibus, maxime adipisci, nostrum earum explicabo aliquid, consequuntur esse ad! Laudantium
                     ab alias asperiores consequatur quisquam sed harum sint quasi exercitationem. Velit inventore illum
@@ -90,6 +197,31 @@
             </article>
             <article id="team3">
                 <h3>TEAM3</h3>
+                <!-- <div class="block_image"> -->
+                    <figure class="block_image right">
+                        <img src="https://cdn2.iconfinder.com/data/icons/user-23/512/User_Customers.png" alt="team2">
+                        <!-- <img src="https://cdn2.iconfinder.com/data/icons/user-23/512/User_Customers.png" alt="team2"> -->
+                        <figcaption>Team3 - info</figcaption>
+                    </figure>
+                <!-- </div> -->
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt quas veritatis assumenda
+                    necessitatibus, maxime adipisci, nostrum earum explicabo aliquid, consequuntur esse ad! Laudantium
+                    ab alias asperiores consequatur quisquam sed harum sint quasi exercitationem. Velit inventore illum
+                    deserunt provident, corporis quia. Aliquam, id labore. Facere optio dicta harum blanditiis
+                    voluptatem dolor eligendi quaerat sed quasi fugit dignissimos, deleniti illo quas nostrum earum, est
+                    cum tempora alias in. Deleniti, assumenda. Culpa, expedita? Minus possimus ullam doloribus, ea
+                    temporibus aspernatur nihil earum reiciendis modi corporis delectus consequatur quas in quidem unde
+                    hic alias quisquam blanditiis magni quaerat. Ea vel totam ipsum illo temporibus?</p>
+            </article>
+            <article id="team3">
+                <h3>TEAM4</h3>
+                <!-- <div class="block_image"> -->
+                    <figure class="block_image left">
+                        <img src="https://cdn2.iconfinder.com/data/icons/user-23/512/User_Customers.png" alt="team2">
+                        <!-- <img src="https://cdn2.iconfinder.com/data/icons/user-23/512/User_Customers.png" alt="team2"> -->
+                        <figcaption>Team4 - info</figcaption>
+                    </figure>
+                <!-- </div> -->
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt quas veritatis assumenda
                     necessitatibus, maxime adipisci, nostrum earum explicabo aliquid, consequuntur esse ad! Laudantium
                     ab alias asperiores consequatur quisquam sed harum sint quasi exercitationem. Velit inventore illum
@@ -101,7 +233,6 @@
             </article>
         </main>
         <footer></footer>
-    </header>
 </body>
 
 </html>
