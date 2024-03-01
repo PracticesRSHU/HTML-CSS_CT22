@@ -48,7 +48,11 @@ h3 {
 p {
     margin: 1em 0;
 }
-
+header{
+    position: sticky;
+    /* position: fixed; */
+    top: 40px;
+}
 #logo {
     float: left;
 }
