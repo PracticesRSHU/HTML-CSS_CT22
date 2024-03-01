@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.gallery {
+    width: 980px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.image {
+    display: inline-block;
+    margin: 5px;
+    width: 30%;
+
+}
+
+.image:nth-child(1) {
+    filter: grayscale(80%);
+}
+
+
+.image:nth-child(3) {
+    filter: saturate(30%);
+}
+
+.image:nth-child(2) {
+    filter: blur(3px);
+    transition: 2s;
+    /* transition: transform 1s ease-in-out 0s; */
+}
+
+.image:nth-child(2):hover {
+    transform: rotate(30deg);
+    /* x  y  z-зміщення */
+    transform-origin: 50% 50% 0;
+    transform-origin: top left 0;
+    /* transition: transform 1s ease-in-out 0s; */
+
+}
+
+.image:nth-child(4) {
+    filter: sepia(0.8);
+}
+
+.image:nth-child(5) {
+    filter: brightness(150%);
+}
+
+.image:nth-child(6) {
+    filter: opacity(0.5);
+}
+
+.image:nth-child(7) {
+    filter: invert(0.5);
+    /* transition: property during timing-function delay */
+    transition: all 2s ease 0.5s
+}
+
+.image:nth-child(8) {
+    filter: contrast(120%);
+}
+
+.image:nth-child(9) {
+    filter: hue-rotate(45deg);
+}
+
+.image:nth-child(10) {
+    /* filter:drop-shadow(0px 0px 0px black);; */
+    /* transition: filter 2s ease-in-out 0s; */
+    /* transition: transform 2s ease 1s; */
+    transition-property: filter, transform;
+    transition-duration: 1s, 3s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+
+}
+
+.image:nth-child(10):hover {
+    filter: drop-shadow(15px -15px 20px blue);
+    /* transition: all 2s ease 1s; */
+    transform: scale(1.2);
+}
+
+.image:nth-child(7):hover {
+    filter: invert(0)
+}
+
+.image_anime {
+    width: 100px;
+    animation: motion2 5s linear alternate 2;
+    animation-iteration-count: 3
+}
+
+/* 
+animation-name: example;  animation-duration: 5s;  animation-timing-function: linear;  animation-delay: 2s;  animation-iteration-count: infinite;  animation-direction: alternate;
+ */
+
+.image_anime:hover {
+    cursor: pointer;
+    animation-play-state: paused;
+}
+
+.block1 {
+    text-align: left;
+}
+
+@keyframes motion {
+    from {
+        margin-left: 0px;
+        transform: scale(0.5);
+    }
+
+    to {
+        margin-left: 200px;
+        transform: scale(1.5);
+    }
+}
+
+
+@keyframes motion2 {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
