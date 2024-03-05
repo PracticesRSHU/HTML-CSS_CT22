@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0">
+    <!-- <link rel="stylesheet" media="screen and (min-width:900px)" href="width_900.css"> -->
+    
+    <title>Adaptive design</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }   
+
+        .container{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .header{
+            background-color: aqua;
+            height: 10vh;
+        }
+        .main{
+            background-color: brown;
+            /* flex-grow: 1; */
+            flex: 1 1 auto; /* flex-element by .container*/
+            display: flex; /* flex-container for aside, section_cente..*/
+        }
+        .aside_left{
+            background-color: yellow;
+            width: 20%;
+        }
+        .section_center{
+            background-color: green;
+            flex-grow: 1;
+        }
+        .aside_right{
+            background-color: red;
+            width: 15%;
+         }
+         .footer{
+            height: 10vh;
+            background-color: violet;
+         }
+         /* @import url(width_900.css) screen and (min-width:900px); */
+
+         /* @media screen and (min-width:900px) and (aspect-ratio:16/9){ */
+         /* @media screen and (min-width:900px) and (max-width:1020) and (orientation:landspase){ //portait
+            rule
+         } */
+         @media screen and (max-width:900px){ /* screen width<900px*/
+            .aside_right{
+                display: none;
+            }
+         }
+
+         @media screen and (max-width:768px){  /* screen with  width<768px*/
+            .main{
+                flex-direction: column;
+             }
+            .aside_left{
+                background-color: gray;
+                 /*main cross => y*/
+                 /* flex-grow: 1; */
+                /* flex: 0 1 30%;  */
+                flex-basis: 30%;
+                width: 100%;
+            }
+            .section_center{
+                /* flex-grow: 2; */
+                flex-grow: 1;
+                order:-1;
+            }
+         }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">header top</header>
+        <main class="main">
+            <aside class="aside_left">aside left</aside>
+            <section class="section_center">section center</section>
+            <aside class="aside_right">aside right</aside>
+        </main>
+        <footer class="footer">footer</footer>
+    </div>
+</body>
+</html>
