@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using form</title>
+    <style>
+        form>input::placeholder {
+            color: green;
+        }
+
+        /* form>input::selection {
+            color: yellow;
+        } */
+
+        input[type="image"] {
+            width: 100px;
+        }
+
+        /* select::selection{
+            color:green;
+        } */
+
+        textarea {
+            resize: vertical;
+        }
+
+        input[type="text"]:focus{
+            border:2px solid coral ;
+            background-color: lightcoral;
+        }
+        textarea:focus{
+            outline: 2px solid lightcoral ;;
+        }
+
+
+        input{
+            width: 60%;
+            /* border:none ; */
+            /* border-bottom: 2px solid blue; */
+            outline: none;
+        }
+        input:focus{
+            outline: 3px solid yellow;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>Add new Conrtacts</h1>
+    <form action="" method="post" tabindex="0">
+        <div tabindex="1">
+            <label> <span>Login:</span>
+                <input type="text" name="login" id="login" placeholder="username" required minlength="3">
+            </label>
+        </div>
+        <div>
+            <label for="email"><span>Email:</span></label>
+            <input type="email" name="email" id="email" placeholder="email@google.com" required>
+        </div>
+        <div>
+            <label for="password"><span>Password</span></label>
+            <input type="password" name="password" id="password" required minlength="8">
+        </div>
+        <div>
+            <label for="phone"><span>Phone:</span></label>
+            <input type="tel" name="phone" id="phone" placeholder="+380673628242" required>
+
+        </div>
+        <fieldset class="register-optopns">
+            <legend>Options for registrations</legend>
+            <input type="checkbox" name="pidpiska1" id="pipdpiska1" checked><span>pidpiska1</span>
+            <input type="checkbox" name="pidpiska2" id="pipdpiska2"><span>pidpiska2</span>
+        </fieldset>
+
+        <fieldset>
+            <legend>male/female</legend>
+            <input type="radio" name="gender" id="male" value="male" checked><span>male</span>
+            <input type="radio" name="gender" id="female" value="female"><span>female</span>
+        </fieldset>
+
+        <fieldset class="country">
+            <legend>Country</legend>
+            <!-- <label for="country">Country:</label> -->
+            <select name="country" id="country" required multiple>
+                <option value="1">Ukraine</option>
+                <option value="2">Italy</option>
+                <option value="3">USA</option>
+                <option value="4">France</option>
+            </select>
+        </fieldset>
+        <div>
+            <input type="image" name="photo"
+                src="https://media.istockphoto.com/id/1337144146/ru/%D0%B2%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F/%D0%B2%D0%B5%D0%BA%D1%82%D0%BE%D1%80-%D0%B7%D0%BD%D0%B0%D1%87%D0%BA%D0%B0-%D0%BF%D1%80%D0%BE%D1%84%D0%B8%D0%BB%D1%8F-%D0%B0%D0%B2%D0%B0%D1%82%D0%B0%D1%80%D0%B0-%D0%BF%D0%BE-%D1%83%D0%BC%D0%BE%D0%BB%D1%87%D0%B0%D0%BD%D0%B8%D1%8E.jpg?s=612x612&w=0&k=20&c=fHyhvKma_mzzlFxVsuAoB7juqZOWt-ZUO56PRvkAO_c="
+                value="">
+                <br>
+            <input type="file" src="">
+        </div>
+        <div>
+            <label for="userBirthday">Your birthday:</label>
+            <input type="date" name="birthday" id="userBirthday">
+        </div>
+        <fieldset>
+            <legend>Added your skills:</legend>
+            <textarea name="skills" id="skills" cols="30" rows="10" placeholder="Yuot skills...">
+
+            </textarea>
+        </fieldset>
+        <div>
+            <input type="submit" value="Send">
+            <input type="reset" value="Reset">
+            <input type="button" value="Button" hidden>
+            <button>registrations</button>
+        </div>
+
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <style>
+        .wrap{
+            width: 90vw;
+            margin: 0 auto;
+            background-color: lightseagreen;
+        }
+        .products{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .product{
+            width: 30%;
+            padding: 10px;
+            border: 2px solid coral;
+            background-color: lightcoral;
+            margin: 10px 10px;
+        }
+    .price{
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    .price::after{
+        content: attr(data-price)"грн.";
+        color:white;
+        font-weight: bold;
+        float: right;
+    }
+
+    .btn{
+        text-decoration: none;
+        background-color: lightseagreen;
+        color: white;
+        padding: 6px 12px;
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <h1>Products</h1>
+        <div id="products" class="products">
+            <div class="product">
+                <h2 class="class_title">Product 1</h2>
+                <div class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam doloremque ut
+                    dolore sunt labore a!</div>
+                <div class="price" data-price="234.45" data-count="3">Price:</div>
+                <a class="btn" href="#">Add to Cart</a>
+            </div>
+            <div class="product">
+                <h2 class="class_title">Product 2</h2>
+                <div class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam doloremque ut
+                    dolore sunt labore a!</div>
+                <div class="price" data-price="134.45">Price:</div>
+                <a class="btn" href="#">Add to Cart</a>
+            </div>
+            <div class="product">
+                <h2 class="class_title">Product 3</h2>
+                <div class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam doloremque ut
+                    dolore sunt labore a!</div>
+                <div class="price" data-price="547.45">Price:</div>
+                <a class="btn" href="#">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -16,7 +16,7 @@
             border-collapse: separate;
             /* border-collapse:collapse; */
             border-spacing: 4px;
-            background-color: lightcoral;
+            /* background-color: lightcoral; */
             margin: 0 auto;
             /* hidden empty ceil */
             empty-cells: hide;
@@ -27,60 +27,22 @@
         } */
         th,
         td {
-            background-color: rgb(18, 155, 155);
+            /* background-color: rgb(18, 155, 155); */
 
         }
 
-        th {
-            border: 1px solid #c3ff00;
-        }
-
-        td {
-            border: 1px solid blue;
-        }
-
-        #uniq {
-            width: 40vw;
-            height: 20vh;
-            text-align: right;
-            vertical-align: bottom;
-            background-color: lightslategray;
-            background-image: url(https://euro-style.kiev.ua/files/imported/product/ps/psIr4FNXahOzQUGXZyEzqYxbzRAlLaIV9geby2QC.jpeg);
-        }
-
-        #table2 {
-            border-collapse: collapse;
-        }
-
-        /* #table2 > tbody > tr> td */
-        #table2 td {
-            width: 50px;
-            height: 20px;
-            text-align: center;
-        }
-
-        #table3 {
-            border-collapse: collapse;
-            text-align: center;
-            /* розміщення caption */
-            caption-side: top;
-        }
 
         #table3 td,
         #table3 th {
             padding: 4px;
-            color: white;
+            /* color: white; */
         }
 
-        #table3 tbody>tr:nth-child(odd) {
-            /* background-color: aqua; */
-        }
 
         /* #table3 tbody>tr:hover {
             background-color: rgb(0, 255, 42);
         } */
-        #table3
-        #table3 td,
+        #table3 #table3 td,
         #table3 th,
         #table3 tr {
             background-color: initial;
@@ -100,13 +62,13 @@
         }
 
         #table3 .col-3 {
-            /* background-color: rgb(172, 39, 217); */
+            background-color: rgb(172, 39, 217);
         }
 
-        #table3 .col-3:hover {
-            /* background-color: rgb(81, 8, 106); */
+        /* #table3 .col-3:hover {
+            background-color: rgb(81, 8, 106);
 
-        }
+        } */
 
         #table3 .col-3:hover #table3 td {
             /* background-color: rgb(81, 8, 106); */
@@ -114,20 +76,20 @@
 
         }
 
-    
-       #table3 td,
-       #table3 th{
+
+        td,
+        th{
             position: relative;
         }
 
-        #table3 td:hover::after,
-        #table3 th:hover::after{
+        td:hover::after,
+        th:hover::after {
             content: "";
             position: absolute;
             background-color: #ffa;
             left: 0;
-            top: -5000px;
-            height: 10000px;
+            top: -68px;
+            height: 161px;
             width: 100%;
             z-index: -1;
         }
@@ -135,59 +97,6 @@
 </head>
 
 <body>
-    <h2>Table1</h2>
-    <table>
-        <tr>
-            <th>head1</th>
-            <th>head2</th>
-            <th>head3</th>
-        </tr>
-        <tr>
-            <td>lorem1</td>
-            <td>lorem2</td>
-            <td>lorem3</td>
-        </tr>
-        <tr>
-            <td>lorem1</td>
-            <td id="uniq">lorem2</td>
-
-            <td>lorem3</td>
-        </tr>
-        <tr>
-            <!-- порожня клітинка -->
-            <td></td>
-            <td>lorem2</td>
-            <td>lorem3</td>
-        </tr>
-    </table>
-    <hr>
-    <h2>Table 2 (colspan, rowspan)</h2>
-    <table id="table2">
-        <tr>
-            <td>1</td>
-            <td colspan="2">2</td>
-            <!-- <td>3</td> -->
-            <td>4</td>
-        </tr>
-        <tr>
-            <td rowspan="3">5</td>
-            <td colspan="2" rowspan="2">6</td>
-            <!-- <td>7</td> -->
-            <td>8</td>
-        </tr>
-        <tr>
-            <!-- <td>9</td> -->
-            <!-- <td>10</td> -->
-            <!-- <td>11</td> -->
-            <td>12</td>
-        </tr>
-        <tr>
-            <!-- <td>13</td> -->
-            <td>14</td>
-            <td>15</td>
-            <td>16</td>
-        </tr>
-    </table>
     <hr>
     <h2>Table3 (caption, thead, tbody, tfoot)</h2>
     <table id="table3">
